@@ -121,6 +121,36 @@ Route::get('account/profile', array('as' => 'profile', 'do' => function()
 	return Redirect::to('account');
 }));
 
+
+/* Routes for the blog application */
+Route::get('/', function() {
+	// this is our list of posts
+});
+
+Route::get('view/(:num)', function($post) {
+	// this is our single post view
+});
+
+Route::get('admin', function() {
+	// show the create new post form
+});
+
+Route::post('admin', function() {
+	// // handle the create new post form
+});
+
+Route::get('login', function() {
+	// show the login form
+});
+
+Route::post('login', function() {
+	// handle the login 
+});
+
+Route::get('logout', function() {
+	// logout from the system
+});
+
 Route::get('superwelcome/(:any)/(:any)', 'account@welcome');
 Route::get('welcome/(:any)/to/(:any)', 'account@welcome');
 
