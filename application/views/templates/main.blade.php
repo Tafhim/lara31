@@ -11,10 +11,11 @@
 <body>
 	<div class="header">
 		@if ( Auth::guest() )
-			{{ HTML::link('admin', 'Login') }}
+			@yield('welcome')
 		@else
 			{{ HTML::link('logout', 'Logout') }}
 		@endif
+
 		<hr />
 		<h1>Wordpush</h1>
 		<h2>Code is Limmericks</h2>

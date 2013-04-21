@@ -239,6 +239,17 @@ Route::get('logout', function() {
 
 });
 
+Route::get('signup', function() {
+	return View::make('pages.signup');
+});
+
+Route::post('signup', array('do' => function() {
+	$new_user = array(
+		'username' => Input::get('username'),
+		'password' => Input::get('password')
+	);
+}));
+
 Route::get('superwelcome/(:any)/(:any)', 'account@welcome');
 Route::get('welcome/(:any)/to/(:any)', 'account@welcome');
 

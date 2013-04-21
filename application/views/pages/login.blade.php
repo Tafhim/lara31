@@ -1,5 +1,9 @@
 @layout('templates.main')
-
+@section('welcome')
+	{{ 'Hello noob!!, ' }}
+	{{ HTML::link('admin', 'get logged in') }}
+	{{ '?' }}
+@endsection
 @section('content')
 	{{ Form::open('login') }}
 

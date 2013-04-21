@@ -1,5 +1,9 @@
 @layout('templates.main')
-
+@section('welcome')
+	{{ 'Hello guest, ' }}
+	{{ HTML::link('admin', 'Login') }}
+	{{ '?' }}
+@endsection
 @section('content')
 	{{ Form::open('admin') }}
 
