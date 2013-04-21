@@ -194,7 +194,7 @@ Route::post('admin', array('before' => 'auth', 'do' => function() {
 
 	// redirect to viewing our new post
 	return Redirect::to('view/'.$post->id);
-});
+}));
 
 Route::get('login', function() {
 	return View::make('pages.login');
@@ -204,13 +204,15 @@ Route::post('login', function() {
 
 	// get the username and password from the POST
 	// data using the Input class
-	$username = Input::get('username');
-	$password = Input::get('password');
+	$userdata = array(
+		'username' => Input::get('username'),
+		'password' => Input::get('password')
+	);
 
 	// call Auth::attempt() on the username and password
 	// to try to login, the session will be created
 	// automatically on success
-	if ( Auth::attempt($username, $password) )
+	if ( Auth::attempt($userdata) )
 	{
 		// it worked, redirect to the admin route
 		return Redirect::to('admin');
