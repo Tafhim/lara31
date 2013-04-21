@@ -70,7 +70,7 @@ return array(
 		'mysql' => array(
 			'driver'   => 'mysql',
 			'host'     => '127.0.0.1',
-			'database' => 'database',
+			'database' => 'lara31_db',
 			'username' => 'root',
 			'password' => 'sph123',
 			'charset'  => 'utf8',
