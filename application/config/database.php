@@ -72,7 +72,7 @@ return array(
 			'host'     => '127.0.0.1',
 			'database' => 'lara31_db',
 			'username' => 'root',
-			'password' => 'sph123',
+			'password' => 'tafhim',
 			'charset'  => 'utf8',
 			'prefix'   => 'lara31_',
 		),
